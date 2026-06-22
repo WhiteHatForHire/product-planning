@@ -1,0 +1,25 @@
+.DS_Store
+
+# Raw imports and temporary extraction output
+*.zip
+*.tar
+*.tar.gz
+*.7z
+_incoming/
+_tmp/
+.import-cache/
+
+# Keep secrets and personal-only working material local.
+private/**
+!private/README.md
+
+# Large/binary source assets are tracked by manifest, not Git.
+*.mp4
+*.mov
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.docx
+*.xlsx
+

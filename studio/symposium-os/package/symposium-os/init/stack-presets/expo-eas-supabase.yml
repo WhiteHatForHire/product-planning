@@ -1,0 +1,26 @@
+# expo-eas-supabase preset — STUB
+# Author full content during init prompt development.
+# Fills in AUTONOMY_LAYER.md section 0.1.
+
+name: expo-eas-supabase
+description: |
+  [One-line description of when to apply this preset.]
+status: stub
+
+stack:
+  languages: []
+  frontend: ""
+  backend: ""
+  database: ""
+  auth: ""
+  ai: ""
+  email: ""
+  repo_layout: ""
+  package_manager: ""
+  test_runner: ""
+  build_command: ""
+  typecheck_command: ""
+  test_command: ""
+  cicd: ""
+  hosting: ""
+  cron: ""
