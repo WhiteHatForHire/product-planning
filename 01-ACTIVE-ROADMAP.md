@@ -15,3 +15,8 @@
 - Phronetics / Dialectical Combat: theory plus pre-build product spec; keep parked but visible.
 - Symposium OS: promote the nested `symposium-os-v0_3` package as studio operating infrastructure.
 - Director Model / AI-native builder method: consolidate into public/private positioning material.
+
+## New Build Candidates
+
+- [Practice Mirror](products/practice-mirror/README.md): AI rehearsal room for hard conversations, interviews, sales calls, apologies, sponsor calls, pitches, and other high-stakes interactions. High priority because the MVP is compact, demoable, and tied to phronetics.
+- [Friend CRM](products/friend-crm/README.md): private relationship intelligence desk for memory, follow-ups, promises, warmth, open loops, and social planning. Medium-high priority because the concept is memorable, useful, and pairs naturally with Practice Mirror and the personal archive.

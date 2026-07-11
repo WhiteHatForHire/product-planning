@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+data/listings.db
+data/digests/*.md
+data/manual/raw-listings.md
+BLOCKERS_FOR_MARCUS.md
+AUTONOMOUS_RUN_LOG.md
+ISSUE_EXECUTION_PLAN.md
+BUILD_REPORT.md
+

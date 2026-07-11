@@ -47,6 +47,13 @@
   - [Four Modes Product Ladder](products/four-modes/four-modes-product-ladder.md) - 3261 words
   - [Four Modes — App Spec v1](products/four-modes/four-modes-app-spec-v1.md) - 3137 words
 
+## products/friend-crm
+
+- Documents: 1
+- Status: build-candidate
+- Source of truth:
+  - [Friend CRM](products/friend-crm/README.md)
+
 ## products/games-and-experiments
 
 - Documents: 10
@@ -132,6 +139,13 @@
   - [Dialectical Combat Master Spec v3](products/phronetics-dialectical-combat/dialectical-combat-master-spec-v3.md) - 7588 words
   - [Dialectical Combat — MVP Build Doc](products/phronetics-dialectical-combat/dialectical-combat-mvp-build-doc.md) - 3525 words
   - [Phronetics Why This Idea Matters](products/phronetics-dialectical-combat/phronetics-why-this-idea-matters.md) - 1420 words
+
+## products/practice-mirror
+
+- Documents: 1
+- Status: build-candidate
+- Source of truth:
+  - [Practice Mirror](products/practice-mirror/README.md)
 
 ## products/propylaea
 
