@@ -35,7 +35,7 @@
 - `studio/offers-and-icp/la` - 9 docs
 - `studio/positioning` - 19 docs
 - `studio/positioning/career` - 10 docs
-- `studio/symposium-os/package` - 54 docs
+- `studio/symposium-os` - 1 reference doc plus a machine-readable canonical pointer
 - `studio/symposium-os/source-notes` - 17 docs
 - `studio/websites` - 7 docs
 - `theory/ai-native-builder-method` - 24 docs

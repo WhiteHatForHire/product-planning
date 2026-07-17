@@ -249,7 +249,7 @@ def route_for(archive: str, source_path: str) -> Path:
         if "# theory" in lowered:
             return Path("theory/directed-emergence")
         if "#studio os" in lowered:
-            return Path("studio/symposium-os/source-notes")
+            return Path("archive/reference-notes/symposium-os")
         if "websites/" in lowered:
             return Path("studio/websites")
         if "jobs-consulting" in lowered or "# leveling up" in lowered:
@@ -544,7 +544,7 @@ Use `rg "search term"` from the repo root, GitHub search, or any Markdown/Obsidi
 - Kairos: preserve the bootstrap package and build log as a compact product planning branch.
 - Dream Mirror: coherent product/spec branch with OS, prompt library, and builder bible.
 - Phronetics / Dialectical Combat: theory plus pre-build product spec; keep parked but visible.
-- Symposium OS: promote the nested `symposium-os-v0_3` package as studio operating infrastructure.
+- Symposium OS: use the standalone `WhiteHatForHire/symposium-os` repository; keep imported notes as non-canonical archive provenance.
 - Director Model / AI-native builder method: consolidate into public/private positioning material.
 """
     (REPO_ROOT / "01-ACTIVE-ROADMAP.md").write_text(roadmap, encoding="utf-8")
@@ -586,16 +586,51 @@ This area holds the operating doctrine for Symposium Studios: templates, skills,
 
 ## Key Areas
 
-- [Symposium OS](studio/symposium-os)
+- [Symposium OS reference](studio/symposium-os)
+- [Canonical Symposium OS repository](https://github.com/WhiteHatForHire/symposium-os)
 - [Positioning](studio/positioning)
 - [Offers and ICP](studio/offers-and-icp)
 - [Websites](studio/websites)
 - [Case Studies](studio/case-studies)
 - [Media, YouTube, and Writing](studio/media-youtube-writing)
 
-The nested Symposium OS package has been unpacked under `studio/symposium-os/package/` so it can be searched and edited directly.
+Symposium OS is canonical in its standalone repository. This planning vault keeps only a reference proxy and archived provenance notes.
 """
     (REPO_ROOT / "04-STUDIO-OS.md").write_text(studio, encoding="utf-8")
+
+    symposium_reference = REPO_ROOT / "studio" / "symposium-os"
+    symposium_reference.mkdir(parents=True, exist_ok=True)
+    (symposium_reference / "README.md").write_text(
+        """# Symposium OS Reference
+
+Symposium OS is canonical in the standalone private repository:
+
+- Remote: `https://github.com/WhiteHatForHire/symposium-os`
+- Local checkout: `/Users/marcusvale/Documents/coding/marcusbrainhq/repos/symposium-os`
+
+This planning workspace retains only a reference proxy and archived provenance notes.
+""",
+        encoding="utf-8",
+    )
+    (symposium_reference / "CANONICAL-REFERENCE.json").write_text(
+        json.dumps(
+            {
+                "schemaVersion": 1,
+                "systemId": "symposium-os",
+                "canonicalRepository": "https://github.com/WhiteHatForHire/symposium-os",
+                "canonicalLocalPath": "/Users/marcusvale/Documents/coding/marcusbrainhq/repos/symposium-os",
+                "stableRelease": "v2.4",
+                "experimentalReleases": {
+                    "manager-producer-wave": "v7-rc1",
+                    "skill-eval-harness": "v0.1",
+                },
+                "mode": "reference-proxy",
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
     for route in sorted(route_counts):
         target = REPO_ROOT / route / "README.md"
@@ -649,9 +684,7 @@ def import_all() -> None:
             imported.append(write_unique_markdown(route, source_path, archive, text))
 
     kairos_zip = cache / "Symposium Studios" / "######Symposium Studios/# Products /Kairos app /Core app stuff /kairos-bootstrap.zip"
-    symposium_zip = cache / "Symposium Studios" / "######Symposium Studios/#Studio OS/#SYMPOSIUM OS/symposium-os-v0_3.zip"
     imported.extend(copy_nested_zip_markdown(kairos_zip, Path("products/kairos/bootstrap-package")))
-    imported.extend(copy_nested_zip_markdown(symposium_zip, Path("studio/symposium-os/package")))
 
     write_manifest(imported, binaries, quarantined)
     write_readmes(imported)

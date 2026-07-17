@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "systemId": "symposium-os",
+  "canonicalRepository": "https://github.com/WhiteHatForHire/symposium-os",
+  "canonicalLocalPath": "/Users/marcusvale/Documents/coding/marcusbrainhq/repos/symposium-os",
+  "stableRelease": "v2.4",
+  "experimentalReleases": {
+    "manager-producer-wave": "v7-rc1",
+    "skill-eval-harness": "v0.1"
+  },
+  "mode": "reference-proxy"
+}
